@@ -64,6 +64,8 @@ function App() {
   const [count20, setcount20] = useState(0);
   const [messege20, setmessege20] = useState("");
 
+  const [img20,setimg20]=useState('')
+
   const click1=()=>{
     setmessege1('')
     if(count1==0){
@@ -263,6 +265,7 @@ function App() {
   const click20 = () => {
     if (count20 === 0) {
       setmessege20("Rewa: The Land of Tansen and the White Tiger Rewa is a major city in the Baghelkhand region of northeastern Madhya Pradesh. For centuries, it served as the capital of the powerful Baghel dynasty. Its historical and cultural identity is remarkably rich, famed in medieval times as a great center of arts that nurtured the legendary musician Tansen, and celebrated in the modern era as the Land of the White Tiger,from where all the world's white tigers in captivity trace their lineage");
+      setimg20(<img src="/20_rewa.jpg" width="400" height="400" alt="Rewa" />)
       setcount20(1);
     } else {
       setmessege20("");
@@ -278,7 +281,7 @@ function App() {
      <br />
      <button onClick={click1}>number 1</button>
      <p>{messege1}</p>
-     
+    
      <button onClick={click2}>Number 2</button>
       <p>{messege2}</p>
 
@@ -334,7 +337,7 @@ function App() {
       <p>{messege19}</p>
 
       <button onClick={click20}>Number 20</button>
-      <p>{messege20}</p>
+      <p>{img20}<br />{messege20}</p>
 
      
     </>
